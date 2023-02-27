@@ -68,7 +68,7 @@ int main(int argc, char **argv){
     /*
      * Open the file and the dataset.
      */
-    file = H5Fopen ("mnist.h5", H5F_ACC_RDONLY, H5P_DEFAULT);
+    file = H5Fopen ("/crossStencil/mnist.h5", H5F_ACC_RDONLY, H5P_DEFAULT);
 
     dataset = H5Dopen (file, "images", H5P_DEFAULT);
 
