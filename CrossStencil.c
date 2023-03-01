@@ -20,8 +20,8 @@
 
 int main(int argc, char **argv){
 
-    if (argc != 7) {
-      printf("Required arguments: offsetX, offsetY, readSizeX, readSizeY\n");
+    if (argc != 8) {
+      printf("Required arguments: offsetX, offsetY, readSizeX, readSizeY, data file\n");
       return -1;
     }
 
@@ -68,7 +68,7 @@ int main(int argc, char **argv){
     /*
      * Open the file and the dataset.
      */
-    file = H5Fopen ("/crossStencil/mnist.h5", H5F_ACC_RDONLY, H5P_DEFAULT);
+    file = H5Fopen (argv[7], H5F_ACC_RDONLY, H5P_DEFAULT);
 
     dataset = H5Dopen (file, "images", H5P_DEFAULT);
 
